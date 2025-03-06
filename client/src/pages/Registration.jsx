@@ -58,9 +58,9 @@ const Registration = ({ setIsAuthenticated, setUser }) => {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen dark:bg-[#0d0f1a]">
-            <div className="w-[40%] mx-auto p-9 dark:bg-gray-800 shadow-lg rounded-lg mt-30">
-                <h2 className="text-2xl font-semibold mb-4">Register Yourself</h2>
+        <div className="flex items-center justify-center min-h-screen px-4 dark:bg-[#0d0f1a]">
+            <div className="sm:w-[90%] md:w-[60%] lg:w-[40%] mx-auto p-6 sm:p-8 dark:bg-gray-800 shadow-lg rounded-lg">
+                <h2 className="text-2xl font-semibold mb-4 text-center">Register Yourself</h2>
                 <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <input 
@@ -107,14 +107,14 @@ const Registration = ({ setIsAuthenticated, setUser }) => {
                                 className="w-full p-2 rounded-lg dark:bg-gray-700"
                                 {...register("password", { required: "Password is required" })} 
                             />
-                            <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-2 top-2">
+                            <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-2 text-sm">
                                 {showPassword ? "Hide" : "Show"}
                             </button>
                         </div>
                         {errors.password && <p className="text-red-500">{errors.password.message}</p>}
                     </div>
 
-                    <button type="submit" className="w-full p-2 bg-green-600 rounded-lg hover:bg-green-700">
+                    <button type="submit" className="w-full p-2 bg-green-600 rounded-lg hover:bg-green-700 transition">
                         Submit
                     </button>
                 </form>
@@ -122,12 +122,12 @@ const Registration = ({ setIsAuthenticated, setUser }) => {
                 <button
                     type="button"
                     onClick={handleSkip}
-                    className="w-full bg-gray-300 dark:bg-gray-500 p-2 rounded mt-2 hover:bg-gray-400 dark:text-black"
+                    className="w-full bg-gray-300 dark:bg-gray-500 p-2 rounded mt-2 hover:bg-gray-400 transition dark:text-black"
                 >
                     Skip
                 </button>
 
-                <p className="mt-3">
+                <p className="mt-3 text-center">
                     Already have an account? <Link to="/login" className="text-blue-500">Login</Link>
                 </p>
             </div>
