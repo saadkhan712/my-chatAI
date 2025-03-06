@@ -126,20 +126,20 @@ function App() {
 
                 <p>{isAuthenticated ? `You are logged in as ${user?.email}` : "Not Logged In"}</p>
               </nav>
-              <div className="w-4/5 ml-[20%] p-0 overflow-y-auto border-0">
-                <Routes>
-                  <Route path="/" element={<Home user={user} />} />
-                  <Route path="/messages-G5mXkL2vN7TqW9bY1XfKp8zJ3AQ6dV4" element={<Massage />} />
-                  <Route path="/settings" element={<Setting />} />
-                  <Route path="/chat-gpt" element={<ChatGpt />} />
-                  <Route path="/project-info" element={<ProjectInfo />} />
-                  <Route path="/technologies" element={<Technologies />} />
-                  <Route path="/help-support" element={<HelpSupport />} />
-                  <Route path="/privacy-security" element={<PrivacySecurity />} />
-                  <Route path="/user-profile" element={<UserProfile />} />
-                  <Route path="*" element={<Navigate to="/" />} />
-                </Routes>
-              </div>
+              <div className="w-full md:w-4/5 md:ml-[20%] p-4 overflow-y-auto flex justify-center items-center min-h-screen">
+              <Routes>
+                <Route path="/" element={<Home user={user} />} />
+                <Route path="/messages-G5mXkL2vN7TqW9bY1XfKp8zJ3AQ6dV4" element={<Massage />} />
+                <Route path="/settings" element={<Setting />} />
+                <Route path="/chat-gpt" element={<ChatGpt />} />
+                <Route path="/project-info" element={<ProjectInfo />} />
+                <Route path="/technologies" element={<Technologies />} />
+                <Route path="/help-support" element={<HelpSupport />} />
+                <Route path="/privacy-security" element={<PrivacySecurity />} />
+                <Route path="/user-profile" element={<UserProfile />} />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </div>
             </div>
           }
         />
