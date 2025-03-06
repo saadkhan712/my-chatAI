@@ -1,0 +1,27 @@
+# Node.js dependencies  
+node_modules/  
+npm-debug.log  
+yarn-error.log  
+.env  
+node_modules
+
+# Logs  
+logs/  
+*.log  
+yarn-debug.log  
+yarn-error.log  
+pnpm-debug.log  
+debug.log  
+
+# Build files  
+dist/  
+build/  
+.cache/  
+
+# Editor files  
+.vscode/  
+.idea/  
+.DS_Store  
+
+# OS files  
+Thumbs.db  
